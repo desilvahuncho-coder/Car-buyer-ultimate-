@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>JDM East Africa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+:root{
+--gold:#c8a45d;
+--dark:#0a0a0a;
+--card:#111111;
+--soft:#999;
+}
+
+.main-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:1fr 1fr;
+height:100vh;
+gap:12px;
+padding:12px;
+}
+
+.panel{
+background:var(--card);
+border-radius:18px;
+overflow:hidden;
+position:relative;
+transition:0.4s ease;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.panel:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(200,164,93,0.15);
+}
+
+.hero{
+background:
+linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400') center/cover;
+display:flex;
+align-items:center;
+padding-left:60px;
+}
+
+.hero-content{
+max-width:420px;
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.05;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:14px;
+color:#ddd;
+line-height:1.7;
+margin-bottom:24px;
+}
+
+.btn-group{
+display:flex;
+gap:14px;
+}
+
+.btn{
+padding:12px 24px;
+border-radius:8px;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+border:none;
+}
+
+.gold{
+background:var(--gold);
+color:black;
+}
+
+.outline{
+background:transparent;
+border:1px solid var(--gold);
+color:white;
+}
+
+.btn:hover{
+opacity:0.9;
+transform:scale(1.03);
+}
+
+.section-title{
+font-size:20px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.featured{
+padding:28px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.featured img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin-top:20px;
+}
+
+.showroom{
+padding:24px;
+overflow:hidden;
+}
+
+.cards{
+display:flex;
+gap:18px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.cards::-webkit-scrollbar{
+display:none;
+}
+
+.car-card{
+min-width:220px;
+background:#1a1a1a;
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.car-card:hover{
+transform:translateY(-5px);
+}
+
+.car-card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.car-info{
+padding:14px;
+}
+
+.car-info h4{
+font-size:15px;
+margin-bottom:8px;
+}
+
+.car-info p{
+font-size:13px;
+color:#bbb;
+}
+
+.imports{
+padding:30px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:
+linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400') center/cover;
+}
+
+.imports p{
+font-size:14px;
+color:#ddd;
+line-height:1.7;
+margin-top:16px;
+margin-bottom:22px;
+}
+
+.mobile-scroll{
+display:none;
+}
+
+@media(max-width:900px){
+
+.main-grid{
+display:none;
+}
+
+.mobile-scroll{
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+height:100vh;
+}
+
+.mobile-section{
+min-width:100vw;
+scroll-snap-align:start;
+padding:18px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:20px;
+}
+
+.mobile-card{
+background:#111;
+border-radius:18px;
+padding:20px;
+}
+
+.hero{
+padding-left:30px;
+border-radius:18px;
+min-height:320px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:13px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- DESKTOP -->
+
+<div class="main-grid">
+
+<div class="panel hero">
+
+<div class="hero-content">
+
+<h1>DIRECT IMPORTS<br>FROM JAPAN</h1>
+
+<p>
+Premium imports for dealers and end users across East Africa.
+</p>
+
+<div class="btn-group">
+<button class="btn gold">VIEW SHOWROOM</button>
+<button class="btn outline">AUCTION IMPORTS</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="panel featured">
+
+<div class="section-title">
+FEATURED CAR OF THE WEEK
+</div>
+
+<h2>2017 Nissan GT-R</h2>
+
+<p style="margin-top:12px;color:#bbb;">
+KES 12,500,000
+</p>
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
+
+</div>
+
+<div class="panel showroom">
+
+<div class="section-title">
+SELECTED SHOWROOM UNITS
+</div>
+
+<div class="cards">
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200">
+<div class="car-info">
+<h4>Toyota Prado</h4>
+<p>KES 7.9M</p>
+</div>
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
+<div class="car-info">
+<h4>Lexus RX</h4>
+<p>KES 7.1M</p>
+</div>
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1200">
+<div class="car-info">
+<h4>Toyota Harrier</h4>
+<p>KES 6.2M</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="panel imports">
+
+<div class="section-title">
+AUCTION IMPORTS
+</div>
+
+<p>
+Thousands of vehicles sourced directly from Japanese auctions.
+Transparent pricing. Dealer focused.
+</p>
+
+<button class="btn gold">
+MAKE INQUIRY
+</button>
+
+</div>
+
+</div>
+
+<!-- MOBILE -->
+
+<div class="mobile-scroll">
+
+<div class="mobile-section">
+
+<div class="hero mobile-card">
+
+<div class="hero-content">
+
+<h1>DIRECT IMPORTS FROM JAPAN</h1>
+
+<p>
+Premium imports across East Africa.
+</p>
+
+<div class="btn-group">
+<button class="btn gold">SHOWROOM</button>
+<button class="btn outline">IMPORTS</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mobile-section">
+
+<div class="mobile-card featured">
+
+<div class="section-title">
+FEATURED CAR
+</div>
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
+
+</div>
+
+</div>
+
+<div class="mobile-section">
+
+<div class="mobile-card showroom">
+
+<div class="section-title">
+SHOWROOM
+</div>
+
+<div class="cards">
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200">
+<div class="car-info">
+<h4>Prado</h4>
+<p>KES 7.9M</p>
+</div>
+</div>
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
+<div class="car-info">
+<h4>Lexus</h4>
+<p>KES 7.1M</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mobile-section">
+
+<div class="mobile-card imports">
+
+<div class="section-title">
+AUCTION IMPORTS
+</div>
+
+<p>
+Direct imports from Japanese auction houses.
+</p>
+
+<button class="btn gold">
+INQUIRE NOW
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
