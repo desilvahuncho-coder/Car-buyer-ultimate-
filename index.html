@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maridadi Motors | Premium East African Import Funnel</title>
+    <!-- Tailwind CSS for sleek, rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-[#F9F9F9] text-[#1A1A1A]">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-[#1A1A1A] text-white sticky top-0 z-50 px-4 py-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-wider text-white">MARIDADI MOTORS</div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
+                <a href="#featured" class="hover:text-white transition">Featured Deal</a>
+                <a href="#showroom" class="hover:text-white transition">Local Showroom (Max 10)</a>
+                <a href="#imports" class="hover:text-white transition">Direct Japan Imports</a>
+            </div>
+            <button onclick="openInquiryModal('General Custom Import')" class="bg-[#0052CC] hover:bg-[#0043A4] text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded transition">
+                Request Custom Import
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION: Featured Car of the Week -->
+    <section id="featured" class="relative bg-black text-white h-[65vh] md:h-[80vh] flex items-end">
+        <!-- Background Image (Replace with your high-res asset) -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto w-full px-4 md:px-8 pb-12 z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+                <span class="bg-[#D1A12C] text-black text-xs font-bold uppercase px-2.5 py-1 rounded mb-3 inline-block tracking-wider">FEATURED VEHICLE OF THE WEEK</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">PORSCHE 911 TURBO S (992)</h1>
+                <p class="text-gray-300 text-sm md:text-base mt-2 max-w-xl"> Pristine local showroom unit. Available for immediate delivery in East Africa or direct tax-exempt structure.</p>
+            </div>
+            <button onclick="openInquiryModal('Porsche 911 Turbo S (Featured)')" class="w-full md:w-auto bg-white text-black hover:bg-gray-200 text-sm font-bold uppercase tracking-wider px-8 py-4 transition shadow-lg text-center">
+                Inquire About This Unit
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12">
+        
+        <!-- LOCAL SHOWROOM UNITS (STRICTLY CAPPED AT 10) -->
+        <section id="showroom" class="mb-16">
+            <div class="flex justify-between items-baseline border-b border-gray-200 pb-4 mb-8">
+                <h2 class="text-2xl font-bold tracking-tight">Exclusive Local Inventory</h2>
+                <span class="text-xs font-bold text-gray-500 uppercase bg-gray-100 px-2 py-1 rounded">10 Selected Units Max</span>
+            </div>
+
+            <!-- 10 Car Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Car" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-[#1A1A1A] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">Nairobi Showroom</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold">2021 Toyota Land Cruiser V8</h3>
+                            <p class="text-xs text-gray-500 mt-1">45,000 km | Automatic | Diesel</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openInquiryModal('2021 Toyota Land Cruiser V8 (Local)')" class="w-full border border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white text-xs font-bold uppercase tracking-wider py-3 transition text-center">
+                            View & Inquire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Repeat card template manually up to 10 cars max -->
+            </div>
+        </section>
+
+        <!-- 3. DIRECT JAPAN AUCTION FUNNEL SECTION -->
+        <section id="imports" class="bg-[#1A1A1A] text-white p-8 md:p-12 rounded-lg">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold tracking-widest text-[#D1A12C] uppercase block mb-2">High Volume Logistics</span>
+                <h2 class="text-3xl font-extrabold tracking-tight mb-4">Direct Imports from Japan Auctions</h2>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                    Skip the local dealer markups. We source directly from live Japanese shipping auctions, managing local customs clearing, compliance verification, and safe port transport to Kenya, Uganda, and Tanzania. Target specifications are routed straight to port partners instantly.
+                </p>
+                <button onclick="openInquiryModal('Direct Japan Auction Inquiry')" class="bg-white text-black hover:bg-gray-200 text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded transition">
+                    Open Japan Auction Inquiry Funnel
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- INQUIRY MODAL (The Collecting Cars Styled Action Box) -->
+    <div id="inquiryModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg overflow-hidden relative shadow-2xl">
+            <div class="bg-[#1A1A1A] text-white px-6 py-4 flex justify-between items-center">
+                <div>
+                    <span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">SUBMIT FORM INQUIRY</span>
+                    <h3 id="modalCarTitle" class="text-md font-bold text-white">Vehicle Name</h3>
+                </div>
+                <button onclick="closeInquiryModal()" class="text-gray-400 hover:text-white text-2xl font-semibold">&times;</button>
+            </div>
+            
+            <form id="funnelForm" class="p-6 space-y-4" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="selectedCar" name="selectedCar">
+                
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Your Full Name</label>
+                    <required input type="text" id="clientName" class="w-full border border-gray-300 p-2.5 text-sm focus:outline-none focus:border-[#0052CC]" placeholder="e.g. Tyrell Kaunda" required>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">WhatsApp / Phone Number</label>
+                        <input type="tel" id="clientPhone" class="w-full border border-gray-300 p-2.5 text-sm focus:outline-none focus:border-[#0052CC]" placeholder="+254 7..." required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Email Address</label>
+                        <input type="email" id="clientEmail" class="w-full border border-gray-300 p-2.5 text-sm focus:outline-none focus:border-[#0052CC]" placeholder="name@domain.com" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Target East African Destination Country</label>
+                    <select id="destination" class="w-full border border-gray-300 p-2.5 text-sm bg-white focus:outline-none focus:border-[#0052CC]">
+                        <option>Kenya (Mombasa / Nairobi)</option>
+                        <option>Uganda (Kampala)</option>
+                        <option>Tanzania (Dar es Salaam)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Specific Requirements or Auction Notes</label>
+                    <textarea id="notes" rows="3" class="w-full border border-gray-300 p-2.5 text-sm focus:outline-none focus:border-[#0052CC]" placeholder="Specify year limits, budget limits, preferred color, or mileage thresholds..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-[#1A1A1A] hover:bg-black text-white font-bold text-xs uppercase tracking-widest py-4 transition">
+                    Submit Inquiry to Japan Supplier & Admin
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Frontend Logic UI Scripts -->
+    <script>
+        function openInquiryModal(carTitle) {
+            document.getElementById('modalCarTitle').innerText = carTitle;
+            document.getElementById('selectedCar').value = carTitle;
+            document.getElementById('inquiryModal').classList.remove('hidden');
+        }
+        function closeInquiryModal() {
+            document.getElementById('inquiryModal').classList.add('hidden');
+            document.getElementById('funnelForm').reset();
+        }
+        
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                car: document.getElementById('selectedCar').value,
+                name: document.getElementById('clientName').value,
+                phone: document.getElementById('clientPhone').value,
+                email: document.getElementById('clientEmail').value,
+                destination: document.getElementById('destination').value,
+                notes: document.getElementById('notes').value
+            };
+
+            try {
+                // Call backend API endpoint
+                const response = await fetch('http://localhost:5000/api/inquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if(response.ok) {
+                    alert('Inquiry successfully split-routed to Japan Supplier and Admin copy!');
+                    closeInquiryModal();
+                } else {
+                    alert('Server error processing routing configuration.');
+                }
+            </script>
+</body>
+</html>
